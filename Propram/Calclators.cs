@@ -20,7 +20,17 @@ namespace Propram
         }
         public float Div(float a, float b)
         {
-            return a / b;
+            float result = -1;
+            try
+            {
+                result = a / b;
+            }
+            catch (Exception exp)
+            {
+                Console.WriteLine(exp.ToString());
+                throw;
+            }
+            return result;
         }
 
     }
